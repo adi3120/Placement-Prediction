@@ -51,15 +51,15 @@ def attendence_value_from_number(base):
 
 def placed_value_from_number(base):
 	if base:
-		return "PLACED"
+		return 1
 	else:
-		return "NOT PLACED"
+		return 0
 
 def interest_value_from_number(base):
 	if base:
-		return "INTERESTED"
+		return 1
 	else:
-		return "NOT INTERESTED"
+		return 0
 
 def backlogs_value_from_number(base):
 	if base==6:
@@ -205,20 +205,20 @@ def placed_or_not(data):
 			if data["PROJECTS"]<3:
 				if data["ATTENDENCE"]<4:
 					if data["BACKLOGS"]>1:
-						if data["CAMPUSTRAINING"]==False:
-							return False
-					return False
-				return False
-	return True
+						if data["CAMPUSTRAINING"]==0:
+							return 0
+					return 0
+				return 0
+	return 1
 
 def get_interest_in_programming(data):
 	if len(data["CERTS"])<7:
 		if data["PROJECTS"]<4:
-			return False
-	return True
+			return 0
+	return 1
 
 def get_backlogs(data):
-	if data["INTEREST"]==False:
+	if data["INTEREST"]==0:
 		if len(data["SKILLS"])<5:
 			if data["PROJECTS"]<4:
 				return random.randint(2,6)
@@ -247,8 +247,8 @@ def get_attendance(data):
 	
 def get_campus_training(data):
 	if len(data["SKILLS"])>7 or data["ATTENDENCE"]>2:
-		return True
-	return False
+		return 1
+	return 0
 
 def get_package_range(data):
 	if data["PLACED"]:
@@ -267,3 +267,11 @@ def get_package_range(data):
 		return random.randint(0,3)
 	return 7
 				
+def value_to_num(data):
+	for i in data["SKILLS"]:
+		data[i]=1
+	for i in data["HOBBIES"]:
+		data[i]=1
+	for i in data["CERTS"]:
+		data[i]=1
+	return data
