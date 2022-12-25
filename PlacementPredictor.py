@@ -1,6 +1,5 @@
 import streamlit as st
 import joblib
-from sklearn.linear_model import LinearRegression
 st.title("PLACEMENT PREDICTION")
 
 branch=st.selectbox("Select your branch",options=["CS","IT","EE","ECE","E","MECH","CIVIL","OTHER"])
