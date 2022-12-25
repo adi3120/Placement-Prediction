@@ -2,7 +2,7 @@ import csv
 import pandas as pd
 from utils import *
 
-branch_chances=[40,20,10,10,5,5,5,5]
+branch_chances=[35,25,10,10,7,6,4,3]
 
 a=1
 n=10000
@@ -275,6 +275,6 @@ placements=pd.read_csv("placement.csv")
 data_min=placements[["BRANCH","HACKATHONS","INTERNSHIPS","PROJECTS","INTEREST","ATTENDENCE","BACKLOGS","CAMPUSTRAINING","cis c++ beg", "cis c beg", "cis c++ adv", "cis c adv" , "cis js ess" , "cis net ess" , "ccna1" , "ccna2" , "ccna3" , "pckt tracer" , "machine learning" , "cisco python pcap" , "oracle" , "aws" , "microsoft" , "google" , "alibaba" , "cis cyber sec" , "cis iot" , "digital mark cert","Computer Games", "Mobile Games", "Outdoor sports", "Indoor Sports", "Travelling", "Collecting something", "Sketching/ Painting/ Craft", "Dancing", "Singing", "Reading Books", "Youtube", "Content Creation",
 "HTML", "CSS", "Javascript", "C", "C++", "Python", "Java", "C#", "Go lang", "React JS", "Angular JS", "Node JS", "Express JS", "MongoDB", "DBMS", "Software", "Design Patterns", "AGILE framework", "MERN Stack Developement", "MEAN Stack Development", "Front End Web Development", "Back End Web Development", "Django Framework Python", "Flask Framework Python", "Linux", "Desktop Application Development", "Dot Net framework C#", "Mobile Application Developement", "Android Studio", "Game Development", "Unity", "Blender", "Video Editing", "Machine learning", "Neural Networks", "Wordpress", "Competitive Coding", "DSA", "Coding", "Problem Solving", "UI/UX Designing", "Figma", "Canva", "MS Excel", "React Native", "Git", "Animation", "Computer Vision", "Kotlin Language", "Cloud", "Project Management", "Hardware Programming", "Arduino", "Raspberry pi", "PHP", "Digital Marketing", "Aptitude", "Logical Reasoning", "English", "Content Creation", "Blockchain Developement", "Business", "entrepreneurship","PLACED","PACKAGE"]]
 
-print(data_min.head())
+# print(data_min.head())
 
 data_min.to_csv('placement.csv')
