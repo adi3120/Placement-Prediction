@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-st.beta_set_page_config(page_title='College Placement Predictor')
+st.set_page_config(page_title='College Placement Predictor')
 st.title("PLACEMENT PREDICTION")
 
 branch=st.selectbox("Select your branch",options=["CS","IT","EE","ECE","E","MECH","CIVIL","OTHER"])
